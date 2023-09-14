@@ -4507,12 +4507,15 @@ typography
   /* End::Card With FullScreen */
 }
 .card.custom-card.products-navigation-card {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   background-color: transparent;
+  box-shadow: none;
 }
 .card.custom-card.products-navigation-card.hidden {
   visibility: hidden;
   display: flex;
+  max-height: 0;
+  margin: 0;
 }
 .card.custom-card.products-navigation-card.open {
   left: 0;
@@ -4520,6 +4523,8 @@ typography
   flex-direction: row-reverse;
   gap: 1rem;
   visibility: visible;
+  max-height: 1300px;
+  margin-bottom: 24px;
 }
 @media (max-width: 991.98px) {
   .card.custom-card.products-navigation-card {
@@ -4578,6 +4583,7 @@ typography
   background-color: #fff;
   padding: 1.25rem;
   color: var(--default-text-color);
+  box-shadow: 0 0.125rem 0 rgba(10, 10, 10, 0.04);
 }
 .card.custom-card .card-link {
   font-size: 0.75rem;
@@ -4814,6 +4820,30 @@ typography
   bottom: 0;
   z-index: 9999;
   margin: 0;
+}
+
+.col-xl-12.colors ul {
+  padding-left: 0;
+  margin-top: 1rem;
+}
+.col-xl-12.colors ul li.list-group-item {
+  list-style: none;
+  border: none;
+  padding: 0;
+}
+.col-xl-12.colors ul li.list-group-item span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px double transparent;
+  cursor: pointer;
+}
+.col-xl-12.colors ul li.list-group-item span:hover {
+  opacity: 0.6;
+}
+.col-xl-12.colors ul li.list-group-item span.current {
+  border-color: black;
 }
 
 .app-header .dropdown-toggle {
